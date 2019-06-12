@@ -1,9 +1,12 @@
 body {background-color: white;}
+html, body{
+    height:100%;
+}
 .rowG{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: flex-start;
+    position: relative;
 }
 .w3-logo{
     display: flex;
@@ -25,8 +28,6 @@ ul.menu{
     padding: 0;
     overflow: hidden;
     background-color: #4CAF50;
-    position: sticky;
-    top: 0;
     cursor:auto;
     height: 52px;
 }
@@ -53,10 +54,16 @@ li.menu a:hover {
     color:black;
 }
 
+.rowBody{
+    position: relative;
+    height: 100%;
+}
+
 .leftcolumn {   
     width: 230px;
     box-shadow: 10px 10px 71px -60px rgba(0,0,0,0.75);
-
+    position: absolute;
+    height: 100%;
 }
 .title-leftcolumn{
     text-decoration: none;
@@ -76,8 +83,7 @@ li.menu a:hover {
 
 .rightcolumn {
     height: auto;
-    max-width: 2230;
-    min-width: 230;
+    margin-left: 230px;
 }
 
 .card {
@@ -125,6 +131,9 @@ h1.title{
 @media only screen and (max-width:770px) {
     .leftcolumn{
         display: none;
+    }
+    .rightcolumn{
+        margin-left: 0;
     }
 }
 
